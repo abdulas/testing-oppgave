@@ -1,0 +1,52 @@
+{
+  "questions": [
+    {
+      "title": "Hva er hovedstaden i Norge?",
+      "answers": [
+        { "answer": "Oslo", "correct": true },
+        { "answer": "Stockholm" },
+        { "answer": "København" },
+        { "answer": "Helsinki" }
+      ],
+      "helper": {
+        "text": "Hovedstaden i Norge er kjent for sin vakre fjord og kongelige slott."
+      }
+    },
+    {
+      "title": "Hvilken planet er nærmest solen i solsystemet vårt?",
+      "answers": [
+        { "answer": "Mars" },
+        { "answer": "Venus", "correct": true },
+        { "answer": "Jupiter" },
+        { "answer": "Neptun" }
+      ],
+      "helper": {
+        "text": "Denne planeten er kjent for sin intense hetebølge og vulkansk aktivitet."
+      }
+    },
+    {
+      "title": "Hvem malte Mona Lisa?",
+      "answers": [
+        { "answer": "Pablo Picasso" },
+        { "answer": "Leonardo da Vinci", "correct": true },
+        { "answer": "Vincent van Gogh" },
+        { "answer": "Michelangelo" }
+      ],
+      "helper": {
+        "text": "Dette italienske geniet malte dette ikoniske portrettet."
+      }
+    },
+    {
+      "title": "Hva er hovedbestanddelen i luft?",
+      "answers": [
+        { "answer": "Oksygen" },
+        { "answer": "Karbonmonoksid" },
+        { "answer": "Karbon dioksid" },
+        { "answer": "Nitrogen", "correct": true }
+      ],
+      "helper": {
+        "text": "Dette gassen utgjør størstedelen av jordens atmosfære."
+      }
+    }
+  ]
+}

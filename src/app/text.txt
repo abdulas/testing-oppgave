@@ -1,0 +1,58 @@
+"use client"
+import React, { useState } from 'react';
+import data from './questions.json';
+
+const Quiz = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+
+  const questions = data.questions;
+
+  const handleAnswerClick = (isCorrect) => {
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+    if (currentQuestion + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      // Hvis du er på det siste spørsmålet, vis "Quiz ferdig" når du klikker på svar.
+      // Du kan også legge til en tilbakestillingsknapp her.
+      setCurrentQuestion(questions.length); // Setter det til et tall som er utenfor spørsmålsindeksen
+    }
+  };
+
+  const resetQuiz = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+  };
+
+  return (
+    <div>
+      {currentQuestion < questions.length ? (
+        <div>
+          <h2>Spørsmål {currentQuestion + 1}:</h2>
+          <p>{questions[currentQuestion].title}</p>
+          <ul>
+            {questions[currentQuestion].answers.map((answer, index) => (
+              <li
+                key={index}
+                onClick={() => handleAnswerClick(answer.correct)}
+              >
+                {answer.answer}
+              </li>
+            ))}
+          </ul>
+          <p>{questions[currentQuestion].helper.text}</p>
+        </div>
+      ) : (
+        <div>
+          <h2>Quiz ferdig!</h2>
+          <p>Du fikk {score} av {questions.length} riktig.</p>
+          <button onClick={resetQuiz}>Start på nytt</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Quiz;
