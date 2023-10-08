@@ -5,10 +5,6 @@ import data from '@/app/Quiz/questions.json';
 import { title } from 'process';
 import { Qwigley } from 'next/font/google';
 
-// test(nanme, fn, timout)
-// it(name, fn, timout)
-
-
 
 test('Quiz viser spørsmål og svaralternativer', () => {
   const { getByText } = render(<Quiz />);
