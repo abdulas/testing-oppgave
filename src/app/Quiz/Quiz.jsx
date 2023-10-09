@@ -49,7 +49,7 @@ const Quiz = () => {
         </div>
       ) : (
         <div className='result'>
-          <h1>Quizen er Ferdig ⚡️</h1>
+          <h2>Quizen er Ferdig ⚡️</h2>
           <p>Din score er <span className='poeng'>{poeng}</span> av {questions.length} {poeng == 4? "Gratulerer 💥" :null} </p>
           <button onClick={resetQiz}>Ta quizen på nytt</button>
         </div>
