@@ -13,6 +13,7 @@ const Quiz = () => {
       setAlternativ(alternativ);
       setPoeng(poeng + 1);
 
+      
     }
     if (alternativ + 1 < questions.length) {
       setAlternativ(alternativ + 1)
