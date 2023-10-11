@@ -36,6 +36,7 @@ const Quiz = () => {
         <div className='quiz-content'>
           <h1>Spørsmål {alternativ + 1}</h1>
           <h3> {questions[alternativ].title} </h3>
+          <p> {questions[alternativ].helper.text} </p>
           <ul>
             {
               questions[alternativ].answers.map((i, index) => (
@@ -44,10 +45,13 @@ const Quiz = () => {
                   onClick={() => handelClick(i.correct)}
                 > {i.answer}
                 </li>
+                
               ))
             }
+          
           </ul>
         </div>
+
       ) : (
         <div className='result'>
           <h2>Quizen er Ferdig ⚡️</h2>

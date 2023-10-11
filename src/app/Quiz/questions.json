@@ -1,51 +1,51 @@
 {
   "questions": [
     {
-      "title": "Hva er hovedstaden i Norge?",
+      "title": "Hva står HTML for?",
       "answers": [
-        { "answer": "Oslo", "correct": true },
-        { "answer": "Stockholm" },
-        { "answer": "København" },
-        { "answer": "Helsinki" }
+        { "answer": "Hyper Text Markup Language", "correct": true },
+        { "answer": "High-Level Text Modeling Language"},
+        { "answer": "Home Tool Markup Language"},
+        { "answer": "Hyperlink and Text Management Language"}
       ],
       "helper": {
-        "text": "Hovedstaden i Norge er kjent for sin vakre fjord og kongelige slott."
+        "text": "Forkortelsen HTML står for noe spesifikt relatert til websider og dokumentstruktur."
       }
     },
     {
-      "title": "Hvilken planet er nærmest solen i solsystemet vårt?",
+      "title": "Hva er den riktige taggen for en overskrift av første nivå i HTML?",
       "answers": [
-        { "answer": "Mars" },
-        { "answer": "Venus", "correct": true },
-        { "answer": "Jupiter" },
-        { "answer": "Neptun" }
+        { "answer": "<h1>", "correct": true},
+        { "answer": "<header>"},
+        { "answer": "<h6>"},
+        { "answer": "<heading1>"}
       ],
       "helper": {
-        "text": "Denne planeten er kjent for sin intense hetebølge og vulkansk aktivitet."
+        "text": "Denne HTML-taggen brukes for den mest fremtredende overskriften på en webside."
       }
     },
     {
-      "title": "Hvem malte Mona Lisa?",
+      "title": "Hva brukes <a> -taggen til i HTML?",
       "answers": [
-        { "answer": "Pablo Picasso" },
-        { "answer": "Leonardo da Vinci", "correct": true },
-        { "answer": "Vincent van Gogh" },
-        { "answer": "Michelangelo" }
+        { "answer": "Å lage lister" },
+        { "answer": "Å inkludere bilde"},
+        { "answer": "Å lage skjemaer" },
+        { "answer": "Å lage hyperkoblinger", "correct": true}
       ],
       "helper": {
-        "text": "Dette italienske geniet malte dette ikoniske portrettet."
+        "text": "Denne HTML-taggen brukes til å opprette hyperkoblinger til andre websider eller ressurser."
       }
     },
     {
-      "title": "Hva er hovedbestanddelen i luft?",
+      "title": "Hva er den riktige måten å inkludere et bilde i HTML?",
       "answers": [
-        { "answer": "Oksygen" },
-        { "answer": "Karbonmonoksid" },
-        { "answer": "Karbon dioksid" },
-        { "answer": "Nitrogen", "correct": true }
+        { "answer": "<img src='bilde.jpg' alt='Mitt bilde'>", "correct": true},
+        { "answer": "<picture src='bilde.jpg' alt='Mitt bilde'>" },
+        { "answer": "<image href='bilde.jpg' text='Mitt bilde'>" },
+        { "answer": "<photo src='bilde.jpg' alt='Mitt bilde'>" }
       ],
       "helper": {
-        "text": "Dette gassen utgjør størstedelen av jordens atmosfære."
+        "text": "Dette er den riktige HTML-koden for å inkludere et bilde på en webside."
       }
     }
   ]
