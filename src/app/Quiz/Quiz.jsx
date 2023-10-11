@@ -1,33 +1,23 @@
 "use client"
-import React, { useState } from 'react';
 import data from './questions.json';
+import { useAlternativState, usePoengState } from './useQuizState';
 
 const Quiz = () => {
-  const [alternativ, setAlternativ] = useState(0);
-  const [poeng, setPoeng] = useState(0);
+  const { alternativ, alternativHandel, resetAlternativ } = useAlternativState();
+  const { poeng, økPoeng, resetPoeng } = usePoengState();
   const questions = data.questions;
 
-  const handelClick = (isRiktig) => {
-
+  const handelClick = (isRiktig) =>{
     if (isRiktig) {
-      setAlternativ(alternativ);
-      setPoeng(poeng + 1);
-
-      
+      økPoeng();
+      alternativHandel();
     }
-    if (alternativ + 1 < questions.length) {
-      setAlternativ(alternativ + 1)
-    }
-    
-    else {
-      setAlternativ(questions.length);
-    }
-
+    alternativHandel();
   }
 
-  const resetQiz = () => {
-    setAlternativ(0);
-    setPoeng(0);
+  const resetQiz = () =>{
+    resetPoeng();
+    resetAlternativ();
   }
 
   return (

@@ -2,7 +2,6 @@ import Quiz from '@/app/Quiz/Quiz';
 import { render, fireEvent, screen, act, renderHook } from '@testing-library/react';
 import data from '@/app/Quiz/questions.json';
 import { describe } from 'node:test';
-import { useState } from 'react';
 
 
 
@@ -81,34 +80,14 @@ describe('Checking if clicking on the options will lead you forward', () => {
   })
   
 })
+// teste react hooks
+// ----------------------------------------------------------------------------
 
 
 
 
-it('should increment poeng from 0 to 1 and then to 2 using useState', () => {
-  // Rendre komponenten
-  const { getByText } = render(<Quiz />);
-  const { result } = renderHook(() => useState(0));
-  const [poeng, setPoeng] = result.current;
 
-  // Verifisere at poeng starter som 0
-  expect(poeng).toBe(0);
 
-  // Finn riktig svaralternativ og klikk på det for å øke poeng til 1
-  const correctAnswerText = 'Hyper Text Markup Language'; // Oppdater med riktig svaralternativ
-  const correctAnswer = getByText(correctAnswerText);
-  fireEvent.click(correctAnswer);
 
-  // Verifisere at poeng nå er 1
-  expect(poeng).toBe(1);
-
-  // Finn neste riktig svaralternativ og klikk på det for å øke poeng til 2
-  const nextCorrectAnswerText = '<h1>'; // Oppdater med neste riktige svaralternativ
-  const nextCorrectAnswer = getByText(nextCorrectAnswerText);
-  fireEvent.click(nextCorrectAnswer);
-
-  // Verifisere at poeng nå er 2
-  expect(poeng).toBe(2);
-});
 
 
