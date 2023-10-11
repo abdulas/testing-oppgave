@@ -1,12 +1,11 @@
 import Quiz from '@/app/Quiz/Quiz';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, act, renderHook } from '@testing-library/react';
 import data from '@/app/Quiz/questions.json';
 import { describe } from 'node:test';
 
 
 
 describe('Quiz displays questions number, questions, and answer options', () =>{
-
 
   it('check that questions starts with 1', () =>{
     render(<Quiz/>)
@@ -16,7 +15,6 @@ describe('Quiz displays questions number, questions, and answer options', () =>{
   
   })
 
-
   test('title should be in the document', () => {
     const { getByText } = render(<Quiz />);
     
@@ -25,7 +23,6 @@ describe('Quiz displays questions number, questions, and answer options', () =>{
   
   });
   
-
   test('Quiz should displays questions and answer options.', () => {
     const { getByText } = render(<Quiz />);
     const questions = data.questions;
@@ -56,7 +53,7 @@ describe('Quiz displays questions number, questions, and answer options', () =>{
 
 
 
-describe('Checking if clicking on the options will lead you forward.', () => {
+describe('Checking if clicking on the options will lead you forward', () => {
 
   it('if oslo cliced should Proceeding to the next question', () =>{
     render(<Quiz/>)
@@ -91,6 +88,15 @@ describe('Checking if clicking on the options will lead you forward.', () => {
 
 // du må teste useState og da kan du levere trykd
 
+describe('testing Hooks', () =>{
+  
+  it('should increment poeng when `handelClick` function is called', () => {
+
+    const { result } = renderHook(() => Quiz());
+
+    expect(result.current).toBe();
+  })
+})
 
 
 
